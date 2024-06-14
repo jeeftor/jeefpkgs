@@ -9,7 +9,7 @@
     let
       overlay = import ./overlay.nix;
     in {
-      overlays = [ overlay ];
+      overlays.default = overlay;
 
       # Provide the overlay as a package
       packages.x86_64-linux = nixpkgs.lib.mkShell {
